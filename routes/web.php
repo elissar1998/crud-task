@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,5 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test' , [TestController::class, 'testAction']);
 });
+Route::resource('/students',StudentController::class);
 // echo TestController::class;
